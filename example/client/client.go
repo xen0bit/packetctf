@@ -47,7 +47,14 @@ func main() {
 		gobobj.Decode(tmpstruct)
 
 		// lets print out!
-		fmt.Println(tmpstruct) // reflects.TypeOf(tmpstruct) == Message{}
-
+		//fmt.Println("COLOR RGB")
+		//fmt.Println(tmpstruct.Red) // reflects.TypeOf(tmpstruct) == Message{}
+		if tmpstruct.Red > 0 {
+			fmt.Println("CODE RED!")
+		} else if tmpstruct.Red == 0 && tmpstruct.Blue == 0 && tmpstruct.Green == 255 {
+			fmt.Println("CODE GREEN: SUCCESS!")
+		} else {
+			fmt.Println("CODE UNKNOWN")
+		}
 	}
 }
